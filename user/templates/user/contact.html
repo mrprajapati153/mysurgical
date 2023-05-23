@@ -1,0 +1,84 @@
+{% extends 'user/base.html' %}
+{% load static %}
+    {% block body %}
+        <!-- Contact Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Contact Us</h6>
+                    <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="row gy-4">
+                    
+                            <div class="col-md-12 text-center ">
+                                <h6 class="fa fa-envelope-open text-primary text-uppercase" > Email</h6>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i> mysurgical2023@gmail.com</p>
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                        <iframe class="position-relative rounded w-100 h-100"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1835.1347967621095!2d72.59124841175529!3d23.087224893589628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83eabaaa1abf%3A0x247ca12b857caaa9!2sBaronet%20Complex%2C%20Ram%20Bag%20Rd%2C%20Sabarmati%2C%20Ahmedabad%2C%20Gujarat%20380005!5e0!3m2!1sen!2sin!4v1681132540057!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- <form>
+                                 {% csrf_token %}
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here" name="" id="message" style="height: 150px"></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                     
+                                        <input type="button" value="submit" class="btn btn-primary w-100 py-3" >
+                                    </div>
+                                </div>
+                            </form> -->
+                            <form action="" method="POST" novalidate>
+                                {% csrf_token %}
+                                {% for f in form %}
+                                <div class="row d-flex ">
+                                  {{f.label_tag}}
+                                  {{f}} {{f.errors|striptags}}
+                                </div>
+                                {% endfor %}<br>
+                                <div class="text-center">
+                                <input type="submit" value="submit" class="btn btn-primary ">
+                                </div>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->    
+        
+     
+        
+    {% endblock %}

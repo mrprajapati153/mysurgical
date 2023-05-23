@@ -1,0 +1,62 @@
+{% extends 'user/base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container mt-5 mb-5">
+    <div class="card">
+       
+        <div class="row g-0">
+            <div class="col-md-6 border-end">
+                <div class="d-flex flex-column justify-content-center">
+                    <div class="main_image"> 
+                        <img src="{{product_item.product_image1.url}}" id="main_product_image"width="350"> 
+                    </div>
+                    <div class="thumbnail_images">
+                        <ul id="thumbnail">
+                            <li><img onclick="changeImage(this)" src="{{product_item.product_image2.url}}" width="70"></li>
+                            <li><img onclick="changeImage(this)" src="{{product_item.product_image2.url}}" width="70"></li>
+                          
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-3 right-side">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="text-uppercase">{{product_item.product_name}}</h3> 
+                        <span class="heart"><i class='bx bx-heart'></i></span>
+                    </div>
+                    <!-- <div class="mt-2 pr-3 content">
+                        <p>{{item.shop_id}}</p>
+                    </div> -->
+                    <div class="mt-2 pr-3 content">
+                        <p>Detail: {{product_item.prodect_detail}}</p>
+                    </div>
+                    <div class="mt-2 pr-3 content">
+                        <p>Manufacture:  {{product_item.product_manufeacture}}</p>
+                    </div>
+                    <div class="mt-2 pr-3 content">
+                        <p>Model No: {{product_item.product_modelno}}</p>
+                    </div>
+                    <h3 class="text-success" >₹ {{product_item.product_price}}</h3>
+                    
+                    <div class="mt-2 pr-3 content">
+                        <p>MO: {{product_item.contact}}</p>
+                    </div>
+               
+                    <div class="buttons d-flex flex-row mt-5 gap-3">
+                      
+                        <a href="" class="btn btn-outline-dark">Buy</a>
+                        <a href="" class="btn btn-outline-dark">On Rent</a>
+                       
+                    </div>
+                 
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
